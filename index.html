@@ -10,19 +10,22 @@
       background: transparent;
       overflow: hidden;
       width: 150px;
-      height: 210px;
+      height: 180px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
-    .weatherwidget-io-frame {
+    .scale-wrapper {
       transform: scale(0.4);
       transform-origin: top center;
+      width: 330px; /* forces original width before scaling */
     }
   </style>
 </head>
 <body>
-  <a class="weatherwidget-io" href="https://forecast7.com/en/39d18n96d57/manhattan/?unit=us" data-label_1="MANHATTAN" data-label_2="WEATHER" data-icons="Climacons Animated" data-mode="Current" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0)" data-textcolor="#ffffff" data-highcolor="#ffffff">MANHATTAN WEATHER</a>
+  <div class="scale-wrapper">
+    <a class="weatherwidget-io" href="https://forecast7.com/en/39d18n96d57/manhattan/?unit=us" data-label_1="MANHATTAN" data-label_2="WEATHER" data-icons="Climacons Animated" data-mode="Current" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0)" data-textcolor="#ffffff" data-highcolor="#ffffff">MANHATTAN WEATHER</a>
+  </div>
   <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
   </script>

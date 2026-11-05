@@ -2,18 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <style>
     body {
       margin: 0;
       padding: 0;
       background: transparent;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
     }
-    /* Hides the current condition text (e.g. Sunny/Cloudy) */
-    .weatherwidget-io-frame iframe .ww-current-condition, 
-    .ww-current-condition, 
-    .ww-condition {
-      display: none !important;
+    .weatherwidget-io {
+      display: block;
     }
   </style>
 </head>
